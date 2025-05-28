@@ -1,0 +1,20 @@
+.slider {
+  -webkit-appearance: none;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 40px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='40' width='40'><text y='28' font-size='28'>👾</text></svg>");
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}

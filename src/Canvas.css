@@ -1,0 +1,11 @@
+.pixelBox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  border: solid rgb(235, 235, 235);
+}
+
+.pixelBox:hover {
+  opacity: 0.5;
+}

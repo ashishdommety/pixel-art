@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Canvas.css';
 
 const Box = (color) => {
   const [boxColor, setBoxColor] = useState(0);
@@ -6,12 +7,9 @@ const Box = (color) => {
   return (
     <div
       onClick={() => setBoxColor(!boxColor)}
+      className="pixelBox"
       style={{
-        width: `20px`,
-        height: `20px`,
         backgroundColor: boxColor ? `black` : `white`,
-        margin: `1px`,
-        cursor: `pointer`,
       }}
     ></div>
   );
@@ -36,10 +34,17 @@ const Canvas = ({ size }) => {
     }
 
     setCanvasState(canvas);
-  }, []);
+  }, [size]);
 
   return (
-    <div style={{ display: `block`, margin: `auto`, width: `fit-content` }}>
+    <div
+      style={{
+        display: `block`,
+        margin: `auto`,
+        width: `fit-content`,
+        boxShadow: `1px 1px 4px #000000`,
+      }}
+    >
       {canvasState.map((row, i) => (
         <div style={{ display: `flex` }}>
           {row.map(() => (
