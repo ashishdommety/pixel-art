@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Canvas from './Canvas';
-import Slider from './slider';
+import Slider from './Slider';
 
 const App = () => {
   const [sliderValue, setSliderValue] = useState(5);
