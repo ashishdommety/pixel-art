@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Canvas from './Canvas';
-import Controls from './Controls';
+import Canvas from './Canvas/Canvas';
+import Controls from './Controls/Controls';
 
 const App = () => {
   const [canvasSize, setCanvasSize] = useState(5);
