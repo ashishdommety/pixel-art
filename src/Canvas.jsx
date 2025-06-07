@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react';
 import './Canvas.css';
 
-const Box = (color) => {
-  const [boxColor, setBoxColor] = useState(0);
+const Box = ({ pixeColor }) => {
+  const [color, setColor] = useState(`rgb(255,255,255)`);
+
+  const changeColor = () => {
+    const currentColor = `rgb(${pixeColor.r}, ${pixeColor.g}, ${pixeColor.b})`;
+    setColor(currentColor);
+  };
 
   return (
     <div
-      onClick={() => setBoxColor(!boxColor)}
+      onClick={changeColor}
       className="pixelBox"
       style={{
-        backgroundColor: boxColor ? `black` : `white`,
+        backgroundColor: color,
       }}
     ></div>
   );
 };
 
-const Canvas = ({ size }) => {
+const Canvas = ({ size, pixelColor }) => {
   const [canvasState, setCanvasState] = useState([]);
 
   // initiate the canvas
@@ -48,7 +53,7 @@ const Canvas = ({ size }) => {
       {canvasState.map((row, i) => (
         <div style={{ display: `flex` }}>
           {row.map(() => (
-            <Box />
+            <Box pixeColor={pixelColor} />
           ))}
         </div>
       ))}
