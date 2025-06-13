@@ -15,7 +15,7 @@ const Box = ({ pixeColor, gridDisplay }) => {
       className="pixelBox"
       style={{
         backgroundColor: color,
-        border: gridDisplay ? `solid rgb(235, 235, 235)` : ``,
+        border: gridDisplay ? `solid rgb(235, 235, 235) 0.1px` : ``,
       }}
     ></div>
   );

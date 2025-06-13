@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="content">
-      <h1>Pixel Art</h1>
+      <h1> 👾 Pixel Art</h1>
       <div id="content">
         <div className="background-instructions">
           <h2 style={{ fontWeight: `regular` }}>Controls</h2>
@@ -24,6 +24,8 @@ const App = () => {
             setCanvasSize={setCanvasSize}
             color={color}
             setColor={setColor}
+            gridDisplay={gridDisplay}
+            setGridDisplay={setGridDisplay}
           />
         </div>
         <Canvas
