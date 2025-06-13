@@ -10,21 +10,28 @@ const App = () => {
     g: 0,
     b: 0,
   });
+  const [gridDisplay, setGridDisplay] = useState(true);
 
   return (
     <div className="content">
       <h1>Pixel Art</h1>
-      <div className="background-instructions">
-        <h2 style={{ fontWeight: `regular` }}>Controls</h2>
-        <hr />
-        <Controls
-          canvasSize={canvasSize}
-          setCanvasSize={setCanvasSize}
-          color={color}
-          setColor={setColor}
+      <div id="content">
+        <div className="background-instructions">
+          <h2 style={{ fontWeight: `regular` }}>Controls</h2>
+          <hr />
+          <Controls
+            canvasSize={canvasSize}
+            setCanvasSize={setCanvasSize}
+            color={color}
+            setColor={setColor}
+          />
+        </div>
+        <Canvas
+          size={canvasSize}
+          pixelColor={color}
+          gridDisplay={gridDisplay}
         />
       </div>
-      <Canvas size={canvasSize} pixelColor={color} />
     </div>
   );
 };

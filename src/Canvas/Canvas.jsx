@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Canvas.css';
 
-const Box = ({ pixeColor }) => {
+const Box = ({ pixeColor, gridDisplay }) => {
   const [color, setColor] = useState(`rgb(255,255,255)`);
 
   const changeColor = () => {
@@ -15,12 +15,13 @@ const Box = ({ pixeColor }) => {
       className="pixelBox"
       style={{
         backgroundColor: color,
+        border: gridDisplay ? `solid rgb(235, 235, 235)` : ``,
       }}
     ></div>
   );
 };
 
-const Canvas = ({ size, pixelColor }) => {
+const Canvas = ({ size, pixelColor, gridDisplay }) => {
   const [canvasState, setCanvasState] = useState([]);
 
   // initiate the canvas
@@ -42,18 +43,11 @@ const Canvas = ({ size, pixelColor }) => {
   }, [size]);
 
   return (
-    <div
-      style={{
-        display: `block`,
-        margin: `auto`,
-        width: `fit-content`,
-        boxShadow: `1px 1px 4px #000000`,
-      }}
-    >
+    <div id="canvas">
       {canvasState.map((row, i) => (
         <div style={{ display: `flex` }}>
           {row.map(() => (
-            <Box pixeColor={pixelColor} />
+            <Box pixeColor={pixelColor} gridDisplay={gridDisplay} />
           ))}
         </div>
       ))}
