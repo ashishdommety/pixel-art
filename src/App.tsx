@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Canvas from './Canvas/Canvas';
 import Controls from './Controls/Controls';

@@ -1,6 +1,12 @@
 import './GridToggle.css';
 
-const GridToggle = ({ gridDisplay, setGridDisplay }) => {
+const GridToggle = ({
+  gridDisplay,
+  setGridDisplay,
+}: {
+  gridDisplay: boolean;
+  setGridDisplay: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <>
       <p>Toggle Grid:</p>

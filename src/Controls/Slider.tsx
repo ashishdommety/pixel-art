@@ -1,6 +1,18 @@
 import './Slider.css';
 
-const Slider = ({ value, onChange, min = '5', max = '25', label }) => (
+const Slider = ({
+  value,
+  onChange,
+  min = 5,
+  max = 25,
+  label,
+}: {
+  value: number;
+  onChange: (value: string) => void;
+  min?: number;
+  max?: number;
+  label: string;
+}) => (
   <>
     {label ? `${label}: ` : ''}
     <input

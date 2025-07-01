@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import Slider from './Slider';
+import { pixelColor } from '../types';
 
-const ColorPicker = ({ color, setColor }) => {
-  const changeRed = (r) => {
-    let newColor = color;
+const ColorPicker = ({
+  color,
+  setColor,
+}: {
+  color: pixelColor;
+  setColor: any;
+}) => {
+  const changeRed = (r: string) => {
     setColor({ r, g: color.g, b: color.b });
   };
 
-  const changeGreen = (g) => {
-    let newColor = color;
+  const changeGreen = (g: string) => {
     setColor({ r: color.r, g, b: color.b });
   };
 
-  const changeBlue = (b) => {
-    let newColor = color;
+  const changeBlue = (b: string) => {
     setColor({ r: color.r, g: color.g, b });
   };
 
