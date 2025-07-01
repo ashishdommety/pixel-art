@@ -4,7 +4,7 @@ import Canvas from './Canvas/Canvas';
 import Controls from './Controls/Controls';
 
 const App = () => {
-  const [canvasSize, setCanvasSize] = useState(5);
+  const [canvasSize, setCanvasSize] = useState(15);
   const [color, setColor] = useState({
     r: 0,
     g: 0,
